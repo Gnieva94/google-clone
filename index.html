@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nieva Gustavo Fabian, @gnievassj">
+    <meta name="description" content="Clon de la página de https://www.google.com para el reto02 del WinteHack 2023 de https://www.codearock.com">
+    <meta name="keywords" content="html css flexbox js reto02">
+    <meta name="" content="">
+    <meta name="" content="">
+    <meta name="" content="">
+    <meta name="" content="">
+    <meta name="" content="">
+    <meta name="" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Google Clon</title>
+</head>
+<body>
+    <header>
+            <a href="">Gmail</a>
+            <a href="">Imágenes</a>
+            <a id="btnApp" href="#"><div class="header_btnContainer btnApp"></div></a>
+            <a href=""><div class="header_btnContainer btnImgProfile"></div></a>
+            <!-- div oculto boton1, evento click -->
+            <div id="toffle" class="toffle">
+                <ul>
+                    <li><a href="">asd</a></li>
+                    <li><a href="">as</a></li>
+                    <li><a href="">as</a></li>
+                </ul>
+            </div>
+    </header>
+    <section>
+        <img class="section_logo" src="images/google_centro.png" alt="Logo de Google">
+        <div class="section_searcherContainer">
+            <img class="searcherContainer_lupa" src="images/lupa.svg" alt="imagen de una lupa">
+            <input class="searcherContainer_texbox" type="text">
+            <a href=""><div class="searcherContainer_mic"></div></a>
+            <a href=""><div class="searcherContainer_cam"></div></a>
+        </div>
+        <!-- div oculto del buscador, evento click -->
+        <div class="searcherContainer_expandible">
+            <ul>
+                <li></li>
+            </ul>
+            <a href="">Buscar con Google</a>
+            <a href="">Voy a tener suerte</a>
+        </div>
+        <div class="section_buttonsContainer">
+            <a class="buttonsContainer_button" href="">Buscar con Google</a>
+            <a class="buttonsContainer_button" href="">Voy a tener suerte</a>
+        </div>
+        <small>Ofrecido por Google en: <a href="">Español (Latinoamérica)</a></small>
+    </section>
+    <footer>
+        <p>Argentina</p>
+        <nav>
+            <ul>
+                <li><a href="">Sobre Google</a></li>
+                <li><a href="">Publicidad</a></li>
+                <li><a href="">Negocios</a></li>
+                <li><a href="">Cómo funciona la Búsqueda</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Privacidad</a></li>
+                <li><a href="">Condiciones</a></li>
+                <li><a href="">Preferencias</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
