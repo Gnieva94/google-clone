@@ -23,8 +23,8 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px 10px;
-    gap: 15px;
+    padding: 1rem 1rem;
+    gap: 1.5rem;
 }
 header a{
     display: flex;
@@ -32,60 +32,61 @@ header a{
     font-size: 1.345rem;
 }
 .header_btnContainer{
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
 }
 .header_btnContainer:hover{
     background-color: rgb(46, 48, 53);
-    border-radius: 50px;
+    border-radius: 5rem;
 }
 .btnApp{
     background-image: url('../images/app_simbol.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 23px;
+    background-size: 2.3rem;
 }
 .btnImgProfile{
     background-image: url('../images/app_simbol.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 25px;
+    background-size: 2.5rem;
 }
 .toffle{
     display: none;
     position: absolute;
-    top: 55px;
-    right: 25px;
-    width: 345px;
-    height: 550px;
+    top: 5.5rem;
+    right: 2.5rem;
+    width: 34.5rem;
+    height: 55.0rem;
     border: solid 1px black;
-    border-radius: 28px;
+    border-radius: 2.8rem;
     background-color: aquamarine;
     padding: 5px;
 }
 .toffle ul{
     background-color: azure;
     border: solid 1px black;    
-    border-radius: 28px;
+    border-radius: 2.8rem;
     padding: 10px;
     height: 100%;
     display: flex;
 }
 
 section{
-    height: calc(100vh - 156px);
+    height: calc(100vh - 15.6rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .section_logo{
-    width: 272px;
-    height: 92px;
-    margin: 15px 0;
+    width: 27.2rem;
+    height: 9.2rem;
+    margin: 1.5rem 0;
 }
 .section_searcherContainer{
-    width: 584px;
+    width: 100%;
+    max-width: 58.4rem;
     height: 48px;
     border: 1px solid #5f6368;
     border-radius: 50px;
@@ -93,7 +94,7 @@ section{
     align-items: center;
     margin: 15px 0;
     padding: 0 15px;
-    gap: 20px;
+    gap: 2rem;
 }
 .section_searcherContainer:hover{
     background-color: rgb(46, 48, 53);
@@ -101,35 +102,40 @@ section{
 }
 .section_searcherContainer a{
     display: flex;
-    height: 24px;
-    width: 24px;
+    height: 2.4rem;
+    width: 2.4rem;
 }
 .searcherContainer_lupa{
-    width: 22px;
+    width: 2.2rem;
 }
 .searcherContainer_texbox{
     flex-grow: 3;
     border: none;
     outline: none;
-    font-size: 18px;
+    font-size: 1.8rem;
     background-color: transparent;
     color: rgb(255, 255, 255);
 }
 .searcherContainer_mic{
     background-image: url('../images/mic.svg');
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
 }
 .searcherContainer_cam{
     background-image: url('../images/cam.svg');
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
 }
 .section_buttonsContainer{
-    width: 584px;
+    max-width: 58.4rem;
     margin:15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 .buttonsContainer_button{
     border: 1px solid black;
@@ -159,7 +165,7 @@ footer{
 }
 footer p{
     font-size: 1.5rem;
-    padding: 15px 26px;
+    padding: 1.5rem 2.6rem;
 }
 footer a{
     font-size: 1.4rem;
@@ -169,18 +175,65 @@ footer nav{
     display: flex;
     justify-content: space-between;
     border-top: solid 1px rgb(60, 64, 67);
-    padding: 15px 30px;
+    padding: 1.5rem 3rem;
 }
 footer nav ul{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-}
-footer nav ul:nth-child(1) li{
-    margin-right: 30px;
+    gap: 3rem;
 }
 footer nav ul:nth-child(2){
     justify-content: flex-end;
 }
-footer nav ul:nth-child(2) li{
-    margin-left: 30px;
+
+@media only screen and (max-width:425px){
+    header{
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+    header a{
+        font-size: 1.1rem
+    }
+    .header_btnContainer{
+        width: 2rem;
+        height: 2rem;
+    }
+    .section_logo{
+        width: 50%;
+        height: 10%;
+    }
+    .section_searcherContainer{
+        width: 90%;
+        gap:.5rem;
+    }
+    .searcherContainer_texbox{
+        width: 50%;
+        font-size: 1.5rem;
+    }
+    .section_buttonsContainer{
+        width: 90%;
+    }
+    .buttonsContainer_button{
+        font-size: 1.3rem;
+    }
+    section small{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    footer p{
+        font-size: 1.2rem;
+    }
+    footer a{
+        font-size: 1.2rem;
+    }
+    footer nav{
+        padding: 1rem 1.2rem;
+    }
+    footer nav ul{
+        gap: 1.3rem;
+    }
+    footer nav ul:nth-child(1){
+        
+    }
 }
