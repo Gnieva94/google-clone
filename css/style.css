@@ -20,6 +20,7 @@ a:hover{
     text-decoration: underline;
 }
 header{
+    height: 6vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -73,7 +74,7 @@ header a{
 }
 
 section{
-    height: calc(100vh - 15.6rem);
+    min-height: calc(100vh - 16vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,6 +161,7 @@ section small a{
     color: #8ab4f8;
 }
 footer{
+    height: 10vh;
     color: rgb(153, 157, 162);
     background-color: rgb(23, 23, 23);
 }
@@ -199,9 +201,12 @@ footer nav ul:nth-child(2){
         width: 2rem;
         height: 2rem;
     }
+    section{
+        height: calc(100vh - 14.6rem);
+    }
     .section_logo{
-        width: 50%;
-        height: 10%;
+        width: 45%;
+        height: auto;
     }
     .section_searcherContainer{
         width: 90%;
@@ -221,6 +226,9 @@ footer nav ul:nth-child(2){
         font-size: 1.2rem;
         margin-top: 1rem;
     }
+    footer{
+        height: auto;
+    }
     footer p{
         font-size: 1.2rem;
     }
@@ -233,7 +241,36 @@ footer nav ul:nth-child(2){
     footer nav ul{
         gap: 1.3rem;
     }
-    footer nav ul:nth-child(1){
-        
+}
+@media screen and (max-width:768px) {
+    header{
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+    header a{
+        font-size: 1.1rem
+    }
+    .header_btnContainer{
+        width: 2rem;
+        height: 2rem;
+    }
+    .section_searcherContainer{
+        width: 90%;
+        gap:1rem;
+    }
+    footer{
+        height: auto;
+    }
+    footer p{
+        font-size: 1.2rem;
+    }
+    footer a{
+        font-size: 1.2rem;
+    }
+    footer nav{
+        padding: 1rem 1.2rem;
+    }
+    footer nav ul{
+        gap: 1.3rem;
     }
 }
