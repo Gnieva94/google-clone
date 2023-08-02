@@ -9,6 +9,12 @@ html{
 }
 body{
     background-color: rgb(32, 33, 36);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+body>div{
+    min-height: 19vh;
 }
 li{
     list-style: none;
@@ -20,21 +26,24 @@ a:hover{
     text-decoration: underline;
 }
 header{
-    height: 6vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 1rem 1rem;
-    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    gap: 1.3rem;
 }
 header a{
     display: flex;
     color: rgb(255, 255, 255);
-    font-size: 1.345rem;
+    font-size: 1.34rem;
 }
 .header_btnContainer{
     width: 4rem;
     height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header_btnContainer:hover{
     background-color: rgb(46, 48, 53);
@@ -44,13 +53,12 @@ header a{
     background-image: url('../images/app_simbol.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 2.3rem;
+    background-size: 2.4rem;
 }
 .btnImgProfile{
-    background-image: url('../images/app_simbol.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 2.5rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
 }
 .toffle{
     display: none;
@@ -60,32 +68,63 @@ header a{
     width: 34.5rem;
     height: 55.0rem;
     border: solid 1px black;
-    border-radius: 2.8rem;
-    background-color: aquamarine;
-    padding: 5px;
+    border-radius: 3rem;
+    background-color: rgba(48, 52, 54,0.7);
+    padding: 8px;
 }
 .toffle ul{
-    background-color: azure;
+    background-color: #171717;
     border: solid 1px black;    
     border-radius: 2.8rem;
-    padding: 10px;
+    padding: 20px;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 1rem;
+}
+.toffle ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.toffle ul li:hover{
+    background-color: rgb(62, 65, 71);
+    border-radius: 20%;
+}
+.toffle ul li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    gap: 0.8rem;
+    width: 80px;
+    height: 80px;
 }
 
 section{
-    min-height: calc(100vh - 16vh);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    flex: 1;
 }
 .section_logo{
     width: 27.2rem;
     height: 9.2rem;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 .section_searcherContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.section_searcher{
     width: 100%;
     max-width: 58.4rem;
     height: 48px;
@@ -97,33 +136,87 @@ section{
     padding: 0 15px;
     gap: 2rem;
 }
-.section_searcherContainer:hover{
+.section_searcher:hover {
     background-color: rgb(46, 48, 53);
     border: solid 1px black;
 }
-.section_searcherContainer a{
+.section_searcher__focuses{
+    background-color: rgb(46, 48, 53);
+    border: solid 1px black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+}
+.searcher_expandible{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-width: 58.4rem;
+    background-color: rgb(46, 48, 53);
+    border: solid 1px black;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top: none;
+}
+.searcher_expandible ul{
+    margin-top: 5px;
+}
+.searcher_expandible ul li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 15px;
+    height: 3rem;
+}
+.searcher_expandible ul li:hover{
+    background-color: rgb(62, 65, 71);
+}
+.bg_Clock{
+    background-image: url('../images/clock.svg');
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.searcher_expandible ul li span{
+    color: rgb(197, 138, 249);
+    flex-grow: 1;
+    font-size: 1.6rem;
+}
+.searcher_expandible ul li a{
+    color: #9aa0a6;
+    font-size: 1.3rem;
+}
+.searcher_expandible ul li a:hover{
+    color: rgb(138,180,248);
+}
+.section_searcher a{
     display: flex;
     height: 2.4rem;
     width: 2.4rem;
 }
-.searcherContainer_lupa{
-    width: 2.2rem;
+.searcher_lupa{
+    width: 2rem;
 }
-.searcherContainer_texbox{
-    flex-grow: 3;
+.searcher_texbox{
+    flex-grow: 1;
     border: none;
     outline: none;
     font-size: 1.8rem;
     background-color: transparent;
     color: rgb(255, 255, 255);
 }
-.searcherContainer_mic{
+.searcher_mic{
     background-image: url('../images/mic.svg');
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
 }
-.searcherContainer_cam{
+.searcher_cam{
     background-image: url('../images/cam.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -139,10 +232,10 @@ section{
     gap: 1rem;
 }
 .buttonsContainer_button{
-    border: 1px solid black;
+    border: 1px solid #303134;
     color: #e8eaed;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 8px 15px;
     background-color: #303134;
     font-size: 1.450rem;
 }
@@ -150,18 +243,15 @@ section{
     text-decoration: none;
     border: 1px solid #5f6368;
 }
-.searcherContainer_expandible{
-    display: none;
-}
-section small{
-    font-size: 1.3rem;
+.section_buttonsContainer small{
+    font-size: 1.325rem;
     color: rgb(189, 193, 198);
+    margin: 1rem 0;
 }
-section small a{
+.section_buttonsContainer small a{
     color: #8ab4f8;
 }
 footer{
-    height: 10vh;
     color: rgb(153, 157, 162);
     background-color: rgb(23, 23, 23);
 }
@@ -201,9 +291,6 @@ footer nav ul:nth-child(2){
         width: 2rem;
         height: 2rem;
     }
-    section{
-        height: calc(100vh - 14.6rem);
-    }
     .section_logo{
         width: 45%;
         height: auto;
@@ -225,9 +312,6 @@ footer nav ul:nth-child(2){
     section small{
         font-size: 1.2rem;
         margin-top: 1rem;
-    }
-    footer{
-        height: auto;
     }
     footer p{
         font-size: 1.2rem;
@@ -257,9 +341,6 @@ footer nav ul:nth-child(2){
     .section_searcherContainer{
         width: 90%;
         gap:1rem;
-    }
-    footer{
-        height: auto;
     }
     footer p{
         font-size: 1.2rem;

@@ -20,40 +20,72 @@
 </head>
 <body>
     <header>
-            <a href="">Gmail</a>
-            <a href="">Imágenes</a>
+            <a href="#">Gmail</a>
+            <a href="#">Imágenes</a>
             <a id="btnApp" href="#"><div class="header_btnContainer btnApp"></div></a>
-            <a href=""><div class="header_btnContainer btnImgProfile"></div></a>
-            <!-- div oculto boton1, evento click -->
+            <a class="header_btnContainer" href="#"><img class="btnImgProfile" src="images/profilePhoto.jpg" alt="Imagen de perfil"></a>
             <div id="toffle" class="toffle">
                 <ul>
-                    <li><a href="">asd</a></li>
-                    <li><a href="">as</a></li>
-                    <li><a href="">as</a></li>
+                    <li><a href="#"><img class="btnImgProfile" src="images/profilePhoto.jpg" alt="Imagen de Perfil">Cuenta</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
+                    <li><a href="#">icon</a></li>
                 </ul>
             </div>
     </header>
+    <div></div>
     <section>
         <img class="section_logo" src="images/google_centro.png" alt="Logo de Google">
         <div class="section_searcherContainer">
-            <img class="searcherContainer_lupa" src="images/lupa.svg" alt="imagen de una lupa">
-            <input class="searcherContainer_texbox" type="text">
-            <a href=""><div class="searcherContainer_mic"></div></a>
-            <a href=""><div class="searcherContainer_cam"></div></a>
+            <div id="sectionSearcher" class="section_searcher">
+                <img class="searcher_lupa" src="images/lupa.svg" alt="imagen de una lupa">
+                <input id="inputSearcher" class="searcher_texbox" type="text">
+                <a href=""><div class="searcher_mic"></div></a>
+                <a href=""><div class="searcher_cam"></div></a>
+            </div>
+            <div id="searcherExpandible" class="searcher_expandible">
+                <ul>
+                    <li>
+                        <div class="bg_Clock"></div>
+                        <span></span><a href="#">Borrar</a></li>
+                    <li>
+                        <div class="bg_Clock"></div>
+                        <span></span><a href="#">Borrar</a></li>
+                    <li>
+                        <div class="bg_Clock"></div>
+                        <span></span><a href="#">Borrar</a></li>
+                    <li>
+                        <div class="bg_Clock"></div>
+                        <span></span><a href="#">Borrar</a></li>
+                    <li>
+                        <div class="bg_Clock"></div>
+                        <span></span><a href="#">Borrar</a></li>
+                </ul>
+                <div class="section_buttonsContainer">
+                    <a class="buttonsContainer_button" href="#">Buscar con Google</a>
+                    <a class="buttonsContainer_button" href="#">Voy a tener suerte</a>
+                </div>  
+            </div>
         </div>
-        <!-- div oculto del buscador, evento click -->
-        <div class="searcherContainer_expandible">
-            <ul>
-                <li></li>
-            </ul>
-            <a href="">Buscar con Google</a>
-            <a href="">Voy a tener suerte</a>
-        </div>
-        <div class="section_buttonsContainer">
+        <div id="btnContainer" class="section_buttonsContainer">
             <a class="buttonsContainer_button" href="">Buscar con Google</a>
             <a class="buttonsContainer_button" href="">Voy a tener suerte</a>
+            <small>Ofrecido por Google en: <a href="">Español (Latinoamérica)</a></small>
         </div>
-        <small>Ofrecido por Google en: <a href="">Español (Latinoamérica)</a></small>
     </section>
     <footer>
         <p>Argentina</p>
