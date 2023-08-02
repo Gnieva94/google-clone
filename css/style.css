@@ -112,8 +112,9 @@ header a{
 .toffle ul li a{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -121,12 +122,20 @@ header a{
     font-size: 1.5rem;
     gap: 0.8rem;
     width: 80px;
-    height: 80px;
-    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 0;
     overflow: hidden;
 }
 .toffle ul li a:hover{
     overflow-wrap: anywhere;
+    height: auto;
+}
+.toffleImg{
+    width: 40px;
+    height: 40px;
+}
+.toffleImgprofile{
+    border-radius: 50%;
 }
 .toffle_ul_top{
     border-top-left-radius: 2.8rem;
