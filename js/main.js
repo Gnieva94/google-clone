@@ -5,7 +5,7 @@ btnApp.addEventListener('click', () => {
     const toffle = document.getElementById('toffle')
     // toffle.style.display = toffle.style.display == 'block' ? 'none' : 'block' ;
     if(toffle.style.display === '' || toffle.style.display === 'none'){
-        toffle.style.display = 'block'
+        toffle.style.display = 'flex'
         btnApp.style.backgroundColor = 'rgba(71, 74, 82, 0.5)'
         btnApp.style.borderRadius = '50px'
     }
