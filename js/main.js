@@ -1,5 +1,6 @@
 const btnApp = document.getElementById('btnApp');
 const inputSearcher = document.getElementById('inputSearcher');
+const buscarGoogle = document.getElementById('buscarGoogle');
 
 btnApp.addEventListener('click', () => {
     const toffle = document.getElementById('toffle')
@@ -15,19 +16,24 @@ btnApp.addEventListener('click', () => {
     }
 })
 
-inputSearcher.addEventListener('focus', () => {
-    const btnContainer = document.getElementById('btnContainer')
-    const sectionSearcher = document.getElementById('sectionSearcher')
-    const searcherExpandible = document.getElementById('searcherExpandible')
-    btnContainer.style.display = 'none'
-    sectionSearcher.classList.add('section_searcher__focuses')
-    searcherExpandible.style.display = 'flex'
+document.addEventListener('click', (e) => {
+    if(e.target.id == 'inputSearcher'){
+        const btnContainer = document.getElementById('btnContainer')
+        const sectionSearcher = document.getElementById('sectionSearcher')
+        const searcherExpandible = document.getElementById('searcherExpandible')
+        btnContainer.style.display = 'none'
+        sectionSearcher.classList.add('section_searcher__focuses')
+        searcherExpandible.style.display = 'flex'
+    }else if(e.target.className != 'section_searcher section_searcher__focuses' && e.target.className != 'bg_Clock' && e.target.className != 'searcher_borrar' && e.target.className != 'section_buttonsContainer'  && e.target.localName != 'li' && e.target.localName != 'span' && e.target.className != 'buttonsContainer_button'){
+        const btnContainer = document.getElementById('btnContainer')
+        const sectionSearcher = document.getElementById('sectionSearcher')
+        const searcherExpandible = document.getElementById('searcherExpandible')
+        btnContainer.style.display = 'flex'
+        sectionSearcher.classList.remove('section_searcher__focuses')
+        searcherExpandible.style.display = 'none'
+    }
 })
-inputSearcher.addEventListener('blur', () => {
-    const btnContainer = document.getElementById('btnContainer')
-    const sectionSearcher = document.getElementById('sectionSearcher')
-    const searcherExpandible = document.getElementById('searcherExpandible')
-    btnContainer.style.display = 'flex'
-    sectionSearcher.classList.remove('section_searcher__focuses')
-    searcherExpandible.style.display = 'none'
+
+buscarGoogle.addEventListener('click', () => {
+    
 })
