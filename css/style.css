@@ -231,7 +231,7 @@ section{
 .searcher_expandible ul li:hover{
     background-color: rgb(62, 65, 71);
 }
-.searcher_expandible ul li:hover a{
+.searcher_expandible ul li:hover button{
     display: block;
 }
 .bg_Clock{
@@ -245,14 +245,21 @@ section{
     color: rgb(197, 138, 249);
     flex-grow: 1;
     font-size: 1.5rem;
+    cursor: context-menu;
 }
-.searcher_expandible ul li a{
+.searcher_borrar{
     display: none;
     color: #9aa0a6;
     font-size: 1.3rem;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+
 }
-.searcher_expandible ul li a:hover{
+.searcher_borrar:hover{
     color: rgb(138,180,248);
+    text-decoration: underline;
+    cursor: pointer;
 }
 .section_searcher a{
     display: flex;
@@ -284,7 +291,7 @@ section{
 }
 .section_buttonsContainer{
     max-width: 58.4rem;
-    margin-top:20px;
+    margin-top:15px;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
@@ -296,9 +303,10 @@ section{
     border: 1px solid #303134;
     color: #e8eaed;
     border-radius: 5px;
-    padding: 8px 15px;
+    padding: 9px 19px;
     background-color: #303134;
-    font-size: 1.450rem;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
 }
 .buttonsContainer_button:hover{
     text-decoration: none;

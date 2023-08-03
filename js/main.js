@@ -1,6 +1,6 @@
 const btnApp = document.getElementById('btnApp');
 const inputSearcher = document.getElementById('inputSearcher');
-const buscarGoogle = document.getElementById('buscarGoogle');
+const btnBorrar = document.getElementsByClassName('searcher_borrar');
 
 btnApp.addEventListener('click', () => {
     const toffle = document.getElementById('toffle')
@@ -17,6 +17,7 @@ btnApp.addEventListener('click', () => {
 })
 
 document.addEventListener('click', (e) => {
+    console.log(e)
     if(e.target.id == 'inputSearcher'){
         const btnContainer = document.getElementById('btnContainer')
         const sectionSearcher = document.getElementById('sectionSearcher')
@@ -24,7 +25,7 @@ document.addEventListener('click', (e) => {
         btnContainer.style.display = 'none'
         sectionSearcher.classList.add('section_searcher__focuses')
         searcherExpandible.style.display = 'flex'
-    }else if(e.target.className != 'section_searcher section_searcher__focuses' && e.target.className != 'bg_Clock' && e.target.className != 'searcher_borrar' && e.target.className != 'section_buttonsContainer'  && e.target.localName != 'li' && e.target.localName != 'span' && e.target.className != 'buttonsContainer_button'){
+    }else if(e.target.className != 'section_searcher section_searcher__focuses' && e.target.className != 'bg_Clock' && e.target.className != 'searcher_borrar' && e.target.className != 'section_buttonsContainer' && e.target.className != 'searcher_expandible'  && e.target.localName != 'li' && e.target.localName != 'span' && e.target.className != 'buttonsContainer_button'){
         const btnContainer = document.getElementById('btnContainer')
         const sectionSearcher = document.getElementById('sectionSearcher')
         const searcherExpandible = document.getElementById('searcherExpandible')
@@ -34,6 +35,25 @@ document.addEventListener('click', (e) => {
     }
 })
 
-buscarGoogle.addEventListener('click', () => {
-    
-})
+function agregarBusqueda(){
+    const inputSearcher = document.getElementById('inputSearcher')
+    if(inputSearcher.value != ''){
+        const ulSearcherExpandible = document.getElementById('ulSearcherExpandible')
+        const li = document.createElement('li')
+        const div = document.createElement('div')
+        const span = document.createElement('span')
+        const button = document.createElement('button')
+        div.classList.add('bg_Clock')
+        let txt = document.createTextNode(inputSearcher.value)
+        let txta = document.createTextNode('Borrar')
+        span.appendChild(txt)
+        button.appendChild(txta)
+        button.classList.add('searcher_borrar')
+        li.appendChild(div)
+        li.appendChild(span)
+        li.appendChild(button)
+        ulSearcherExpandible.appendChild(li)
+    }
+}
+
+
