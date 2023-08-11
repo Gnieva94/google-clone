@@ -1,6 +1,8 @@
 const btnApp = document.getElementById('btnApp');
 const inputSearcher = document.getElementById('inputSearcher');
 const btnBorrar = document.getElementsByClassName('searcher_borrar');
+const ulSearcherExpandible = document.getElementById('ulSearcherExpandible');
+const sectionSearcher = document.getElementById('sectionSearcher');
 
 btnApp.addEventListener('click', () => {
     const toffle = document.getElementById('toffle')
@@ -53,7 +55,18 @@ function agregarBusqueda(){
         li.appendChild(span)
         li.appendChild(button)
         ulSearcherExpandible.appendChild(li)
+        inputSearcher.value = ''
+        inputSearcher.focus()
     }
 }
 
+ulSearcherExpandible.addEventListener('click', (e) => {
+    if(e.target.className == 'searcher_borrar'){
+        e.target.parentElement.remove()
+    }
+})
 
+sectionSearcher.addEventListener('submit', (e) => {
+    e.preventDefault()
+    agregarBusqueda()
+})
